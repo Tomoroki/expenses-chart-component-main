@@ -1,17 +1,27 @@
 .card__spending {
+    background-color: $blanco;
+    padding: 2rem;
     .card__chart {
-        background-color: red;
+        .card__chart--bar {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        .card__chart--bar {
-        grid-column: 1 / 8;
-        height: 10rem;
-        background-color: blue;
+        align-items: end;
+        height: 20rem;
+        gap: 2rem;
+        div {
+            margin-top: 2rem;
+            border-radius: .5rem;
+            background-color: $softRed;
+        }
+        .mon {
+            height: 5rem;
+        }
         }
         .card__chart--names {
-            grid-column: 1 / 8;
-            grid-row: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2rem;
+            justify-items: center;
         }
     }
 }
