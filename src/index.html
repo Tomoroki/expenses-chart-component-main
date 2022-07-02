@@ -12,31 +12,50 @@
 </head>
 
 <body>
-    <main class="container">
-        My balance
-        $921.48
+    <div class="container">
+        <main class="card">
+            <section class="card__balance">
+                <h1>My balance</h1>
+                <p>$921.48</p>
+                <img src="./assets/logo.svg" alt="Logo">
+            </section>
 
-        Spending - Last 7 days
-
-        mon
-        tue
-        wed
-        thu
-        fri
-        sat
-        sun
-
-        Total this month
-        $478.33
-
-        +2.4%
-        from last month
+            <section class="card__spending">
+                <h2>Spending - Last 7 days</h2>
+                <div class="card__chart">
+                    <div class="card__chart--bar">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card__chart--names">
+                        <p>mon</p>
+                        <p>tue</p>
+                        <p>wed</p>
+                        <p>thu</p>
+                        <p>fri</p>
+                        <p>sat</p>
+                        <p>sun</p>
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    Total this month
+                    $478.33
+                    +2.4%
+                    from last month
+                </footer>
+            </section>
+        </main>
 
         <footer class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="https://github.com/Tomoroki" target="_blank">Tomoroki</a>.
         </footer>
-    </main>
+    </div>
 </body>
 
 </html>

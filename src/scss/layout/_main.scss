@@ -1,3 +1,20 @@
+.card__spending {
+    .card__chart {
+        background-color: red;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        .card__chart--bar {
+        grid-column: 1 / 8;
+        height: 10rem;
+        background-color: blue;
+        }
+        .card__chart--names {
+            grid-column: 1 / 8;
+            grid-row: 2 / 3;
+        }
+    }
+}
 .attribution {
     font-size: 11px;
     text-align: center;
