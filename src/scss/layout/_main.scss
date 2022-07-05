@@ -38,6 +38,19 @@
                 background-color: $softRed;
                 height: 5rem;
             }
+            .mon {
+                position: relative;
+                p {
+                    position: absolute;
+                    top: -45px;
+                    right: -9px;
+                    background-color: $darkBrown;
+                    font-size: 1.4rem;
+                    color: $blanco;
+                    padding: 0.8rem;
+                    border-radius: 0.5rem;
+                }
+            }
             div:nth-child(2) {
                 height: 10rem;
             }
