@@ -33,41 +33,66 @@
         height: 20rem;
         gap: 1rem;
         margin-top: 1rem;
-            div {
-                border-radius: .5rem;
+            // div {
+            //     border-radius: .5rem;
+            //     background-color: $softRed;
+            // }
+            .column {
                 background-color: $softRed;
                 height: 5rem;
-            }
-            .mon {
+                border-radius: .5rem;
                 position: relative;
-                p {
-                    position: absolute;
-                    top: -45px;
-                    right: -9px;
-                    background-color: $darkBrown;
-                    font-size: 1.4rem;
-                    color: $blanco;
-                    padding: 0.8rem;
-                    border-radius: 0.5rem;
+                .hover {
+                    p {
+                        display: none;
+                        position: absolute;
+                        top:  -45px;
+                        left: -10px;
+                        font-size: 1.5rem;
+                        background-color: $darkBrown;
+                        color: $blanco;
+                        padding: .8rem;
+                        border-radius: .5rem;
+                        opacity: 1;
+                    }
+                }
+                &:hover {
+                    opacity: 0.5;
+                }
+                &:hover .hover p{
+                    display: block;
                 }
             }
-            div:nth-child(2) {
+            // .mon {
+            //     position: relative;
+            //     p {
+            //         position: absolute;
+            //         top: -45px;
+            //         right: -9px;
+            //         background-color: $darkBrown;
+            //         font-size: 1.4rem;
+            //         color: $blanco;
+            //         padding: 0.8rem;
+            //         border-radius: 0.5rem;
+            //     }
+            // }
+            .column:nth-child(2) {
                 height: 10rem;
             }
-            div:nth-child(3) {
+            .column:nth-child(3) {
                 background-color: $cyan;
                 height: 15rem;
             }
-            div:nth-child(4) {
+            .column:nth-child(4) {
                 height: 9rem;
             }
-            div:nth-child(5) {
+            .column:nth-child(5) {
                 height: 7rem;
             }
-            div:nth-child(6) {
+            .column:nth-child(6) {
                 height: 13rem;
             }
-            div:nth-child(7) {
+            .column:nth-child(7) {
                 height: 8rem;
             }
         }

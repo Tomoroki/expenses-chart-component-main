@@ -52,11 +52,11 @@ function createElement(day, amount) {
     const column = document.createElement("div");
     column.classList.add("column");
     column.innerHTML = `
-   <div class="hover">
-            $${amount}
-          </div>
-          <div ${week[Today - 1] === day ? "class='block active'" : "class='block'"} style="height: ${amount * 2}px;"></div>
-          ${day}
+    <div class="hover">
+    <p>$${amount}</p>
+    </div>
+    <div ${week[Today - 1] === day ? "class='block active'" : "class='block'"}>
+    </div>
    `;
     CHART.appendChild(column);
 }
