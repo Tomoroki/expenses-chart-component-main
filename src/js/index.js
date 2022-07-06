@@ -55,7 +55,7 @@ function createElement(day, amount) {
    <div class="hover">
             $${amount}
           </div>
-          <div ${week[Today - 1] == day ? "class='block active'" : "class='block'"} style="height: ${amount * 2}px;"></div>
+          <div ${week[Today - 1] === day ? "class='block active'" : "class='block'"} style="height: ${amount * 2}px;"></div>
           ${day}
    `;
     CHART.appendChild(column);
@@ -66,24 +66,4 @@ function createElement(day, amount) {
 //     bar.classList.add("card__chart--bar__item");
 //     bar.style.height = `${data[i].amount}%`;
 //     chart.appendChild(bar);
-// }
-
-// Recorrer el json y aparecer el tooltip cuando se hace hover
-// for (let i = 0; i < data.length; i++) {
-//     chart.addEventListener("mouseover", function () {
-
-//         // const tooltip = document.createElement("div");
-//         // tooltip.classList.add("card__chart--tooltip");
-//         // tooltip.innerHTML = `$${data[i].amount}`;
-//         // chart.appendChild(tooltip);
-//     }
-//     );
-//     chart.addEventListener("mouseout", function () {
-//         chart.removeChild(chart.lastChild);
-//     }
-//     );
-// }
-
-// chart.addEventListener("mouseover", function (e) {
-//     console.log(e.target);
-// });
+//
