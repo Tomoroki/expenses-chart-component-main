@@ -41,22 +41,19 @@ const week = [];
 Data.forEach(item => {
     week.push(item.day);
     createElement(item.day, item.amount);
-    console.log("new element");
 });
-console.log(week);
 
 function createElement(day, amount) {
     const d = new Date();
     const Today = d.getDay();
-    console.log(week[Today - 1]);
+    console.log(Today);
     const column = document.createElement("div");
-    column.classList.add("column");
+    column.classList.add("bar__column");
     column.innerHTML = `
-    <div class="hover">
-    <p>$${amount}</p>
+    <p class="bar--expense">$${amount}</p>
+    <div class='bar'>
     </div>
-    <div ${week[Today - 1] === day ? "class='block active'" : "class='block'"}>
-    </div>
+    <p class="bar--day">${day}</p>
    `;
     CHART.appendChild(column);
 }
