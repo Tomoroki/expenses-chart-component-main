@@ -1,6 +1,7 @@
 .card {
     max-width: 40rem;
 }
+
 .card__balance {
     display: flex;
     justify-content: space-between;
@@ -8,118 +9,153 @@
     border-radius: 0.5rem;
     background-color: $softRed;
     margin-bottom: 1rem;
+
     h1 {
         font-size: 1.5rem;
         color: $blanco;
         font-weight: $regular;
     }
+
     p {
         font-size: 2.4rem;
         color: $blanco;
         font-weight: $bold;
         margin: 1rem 0 0 0;
     }
-    
+
 }
+
 .card__spending {
     background-color: $blanco;
     padding: 2rem;
     border-radius: 0.5rem;
+
     .card__chart {
         .card__chart--bar {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        align-items: end;
-        height: 20rem;
-        gap: 1rem;
-        margin-top: 1rem;
-            .column {
-                background-color: $softRed;
-                height: 5rem;
-                border-radius: .5rem;
+            display: flex;
+            gap: 1rem;
+            margin: 6rem 0 0;
+            justify-content: space-between;
+
+            .bar__column {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1rem;
                 position: relative;
-                .hover {
-                    p {
-                        position: absolute;
-                        top:  -45px;
-                        left: -10px;
-                        font-size: 1.5rem;
-                        background-color: $darkBrown;
-                        color: $blanco;
-                        padding: .8rem;
-                        border-radius: .5rem;
-                        opacity: 0;
-                        z-index: 2;
-                    }
+                height: min-content;
+                align-self: flex-end;
+                width: min(9vw, 4rem);
+
+                .bar--expense {
+                    opacity: 0;
+                    position: absolute;
+                    top: -40px;
+                    z-index: 2;
+                    background-color: $darkBrown;
+                    color: white;
+                    border-radius: 5px;
+                    padding: 0.7rem;
+                    font-size: 1.5rem;
+                    font-weight: bold;
                 }
-                &:hover .hover p{
+
+                &:hover .bar--expense {
                     opacity: 1;
                 }
-                .active:hover {
+
+                .bar {
+                    background-color: $softRed;
+                    height: 5rem;
+                    // width: min(50vw, 400px);
+                    width: inherit;
+                    border-radius: .5rem;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.5;
+                    }
+                }
+                .bar--day {
                     opacity: 0.5;
+                    font-size: 1.5rem;
                 }
             }
-            .column:nth-child(2) {
+
+            .bar__column:nth-child(2) .bar{
                 height: 10rem;
             }
-            .column:nth-child(3) {
+
+            .bar__column:nth-child(3) .bar{
                 background-color: $cyan;
                 height: 15rem;
             }
-            .column:nth-child(4) {
+
+            .bar__column:nth-child(4) .bar{
                 height: 9rem;
             }
-            .column:nth-child(5) {
+
+            .bar__column:nth-child(5) .bar{
                 height: 7rem;
             }
-            .column:nth-child(6) {
+
+            .bar__column:nth-child(6) .bar{
                 height: 13rem;
             }
-            .column:nth-child(7) {
+
+            .bar__column:nth-child(7) .bar{
                 height: 8rem;
             }
         }
+
         .card__chart--names {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 1rem;
             justify-items: center;
-                p {
-                    margin-top: 1.5rem;
-                    font-size: 1.5rem;
-                    color: $darkBrown;
-                    opacity: .7;
-                }
+
+            p {
+                margin-top: 1.5rem;
+                font-size: 1.5rem;
+                color: $darkBrown;
+                opacity: .7;
+            }
         }
     }
+
     .line {
         width: 100%;
         height: 2px;
         background-color: $cream;
         margin: 3rem 0;
     }
+
     .card__footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
         section {
             h3 {
                 font-size: 1.5rem;
                 color: $darkBrown;
                 opacity: 0.5;
             }
+
             p {
                 font-size: 3.1rem;
                 font-weight: $bold;
                 margin-top: .5rem;
             }
         }
+
         aside {
             p {
                 font-size: 1.5rem;
                 font-weight: $bold;
                 text-align: end;
             }
+
             h4 {
                 font-size: 1.5rem;
                 color: $darkBrown;
@@ -128,13 +164,14 @@
         }
     }
 }
+
 .attribution {
     p {
         font-size: 1.7rem;
         text-align: center;
     }
+
     a {
         color: hsl(228, 45%, 44%);
     }
 }
-
