@@ -51,7 +51,7 @@
                 .bar--expense {
                     opacity: 0;
                     position: absolute;
-                    top: -40px;
+                    top: 10px;
                     z-index: 2;
                     background-color: $darkBrown;
                     color: white;
@@ -63,6 +63,11 @@
 
                 &:hover .bar--expense {
                     opacity: 1;
+                    transition: opacity 0.5s ease-in-out;
+                }
+                &:hover .slide-top {
+                    -webkit-animation: slide-top 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+                        animation: slide-top 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
                 }
 
                 .bar {
@@ -165,10 +170,35 @@
     }
 }
 
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    100% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+}
+
 .attribution {
     p {
         font-size: 1.7rem;
         text-align: center;
+        margin-top: 5rem;
     }
 
     a {

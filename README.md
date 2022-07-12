@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://github.com/Tomoroki/ping-coming-soon-page)
--   Live Site URL: [Add live site URL here](https://tomoroki.github.io/ping-coming-soon-page/)
+-   Solution URL: [Add solution URL here](https://github.com/Tomoroki/expenses-chart-component-main)
+-   Live Site URL: [Add live site URL here](https://tomoroki.github.io/expenses-chart-component-main/)
 
 ## My process
 
@@ -41,9 +41,11 @@ Users should be able to:
 
 -   Semantic HTML5 markup
 -   SCSS custom properties
+-   CSS Flex
 -   CSS Grid
 -   Mobile-first workflow
 -   JavaScript
+-   Animista CSS
 
 ## Author
 

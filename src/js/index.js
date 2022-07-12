@@ -14,7 +14,7 @@ function createElement(day, amount) {
     const column = document.createElement("div");
     column.classList.add("bar__column");
     column.innerHTML = `
-    <p class="bar--expense">$${amount}</p>
+    <p class="bar--expense slide-top">$${amount}</p>
     <div class='bar'></div>
     <p class="bar--day">${day}</p>`;
     chart.appendChild(column);
